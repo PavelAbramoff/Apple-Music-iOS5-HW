@@ -8,13 +8,29 @@
 import SwiftUI
 
 struct TabBar: View {
+    @State var current = 2
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct TabBar_Previews: PreviewProvider {
-    static var previews: some View {
-        TabBar()
+        TabView {
+            
+            Text("")
+                .tabItem {
+                    Image(systemName: "house.fill")
+                    Text("Медиатека")
+                }
+            
+            Text("")
+                .tabItem {
+                    Image(systemName: "dot.radiowaves.left.and.right")
+                    Text("Радио")
+                }
+            
+            Text("")
+                .tabItem {
+                    Image(systemName: "magnifyingglass")
+                    Text("Поиск")
+                }
+        }
+        .accentColor(.red)
     }
 }
