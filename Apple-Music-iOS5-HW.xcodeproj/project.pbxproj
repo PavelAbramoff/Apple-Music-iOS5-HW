@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1267192F288D54C600818658 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267192E288D54C500818658 /* BlurView.swift */; };
+		12671931288D5D1200818658 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12671930288D5D1100818658 /* TabBar.swift */; };
 		12BFFDF6288C1F4800F6C8B2 /* Apple_Music_iOS5_HWApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12BFFDF5288C1F4800F6C8B2 /* Apple_Music_iOS5_HWApp.swift */; };
 		12BFFDF8288C1F4800F6C8B2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12BFFDF7288C1F4800F6C8B2 /* ContentView.swift */; };
 		12BFFDFA288C1F5A00F6C8B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12BFFDF9288C1F5A00F6C8B2 /* Assets.xcassets */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1267192E288D54C500818658 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		12671930288D5D1100818658 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		12BFFDF2288C1F4800F6C8B2 /* Apple-Music-iOS5-HW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Apple-Music-iOS5-HW.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		12BFFDF5288C1F4800F6C8B2 /* Apple_Music_iOS5_HWApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apple_Music_iOS5_HWApp.swift; sourceTree = "<group>"; };
 		12BFFDF7288C1F4800F6C8B2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,6 +65,8 @@
 				12BFFDFE288C1F5A00F6C8B2 /* Persistence.swift */,
 				12BFFE00288C1F5A00F6C8B2 /* Apple_Music_iOS5_HW.xcdatamodeld */,
 				12BFFDFB288C1F5A00F6C8B2 /* Preview Content */,
+				1267192E288D54C500818658 /* BlurView.swift */,
+				12671930288D5D1100818658 /* TabBar.swift */,
 			);
 			path = "Apple-Music-iOS5-HW";
 			sourceTree = "<group>";
@@ -145,6 +151,8 @@
 			files = (
 				12BFFDFF288C1F5A00F6C8B2 /* Persistence.swift in Sources */,
 				12BFFDF8288C1F4800F6C8B2 /* ContentView.swift in Sources */,
+				1267192F288D54C600818658 /* BlurView.swift in Sources */,
+				12671931288D5D1200818658 /* TabBar.swift in Sources */,
 				12BFFE02288C1F5A00F6C8B2 /* Apple_Music_iOS5_HW.xcdatamodeld in Sources */,
 				12BFFDF6288C1F4800F6C8B2 /* Apple_Music_iOS5_HWApp.swift in Sources */,
 			);
