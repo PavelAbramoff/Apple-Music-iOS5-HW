@@ -8,24 +8,33 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var showingSecondView = false
+    
     var body: some View {
         NavigationView {
             ScrollView {
             }
             .navigationBarTitle("Медиатека")
             .navigationBarItems(trailing: HStack {
-                Button("Править") {
+                Button(action: {
+                    self.showingSecondView.toggle()
+                }) {
+                    Text("Править")
+                } .fullScreenCover(isPresented: $showingSecondView) {
+                    SecondView()
+                        
                 }
                 .foregroundColor(.red)
-            }
-            )
+            })
         }
         VStack {
             Text("Ищите свою музыку ?")
-                .font(.title)
+                .font(.title.bold())
+                .foregroundColor(.black)
             Text("Здесь появится купленная Вами Музыка в iTunes Store музыка")
                 .lineLimit(nil)
-                .font(.callout)
+                .font(.callout.bold())
                 .multilineTextAlignment(.center)
                 .foregroundColor(.gray)
         }

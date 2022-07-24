@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MiniPlayer: View {
     var body: some View {
-    
+        
         VStack{
             HStack(spacing: 15){
                 
@@ -22,6 +22,7 @@ struct MiniPlayer: View {
                 Text("Edith Piaf")
                     .font(.title2)
                     .fontWeight(.bold)
+                    .foregroundColor(.black)
                 
                 Spacer(minLength: 0)
                 
