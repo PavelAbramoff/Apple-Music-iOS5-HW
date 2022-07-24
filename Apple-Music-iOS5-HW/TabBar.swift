@@ -11,26 +11,32 @@ struct TabBar: View {
     @State var current = 2
     
     var body: some View {
-        TabView {
-            
-            Text("")
-                .tabItem {
-                    Image(systemName: "house.fill")
-                    Text("Медиатека")
-                }
-            
-            Text("")
-                .tabItem {
-                    Image(systemName: "dot.radiowaves.left.and.right")
-                    Text("Радио")
-                }
-            
-            Text("")
-                .tabItem {
-                    Image(systemName: "magnifyingglass")
-                    Text("Поиск")
-                }
-        }
-        .accentColor(.red)
+        
+        ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom), content: {
+            TabView {
+                
+                Text("")
+                    .tabItem {
+                        Image(systemName: "house.fill")
+                        Text("Медиатека")
+                    }
+                
+                Text("")
+                    .tabItem {
+                        Image(systemName: "dot.radiowaves.left.and.right")
+                        Text("Радио")
+                    }
+                
+                Text("")
+                    .tabItem {
+                        Image(systemName: "magnifyingglass")
+                        Text("Поиск")
+                    }
+            }
+            .accentColor(.red)
+            BlurView()
+                .frame(height: 80)
+                .offset(y: -40)
+        })
     }
 }
