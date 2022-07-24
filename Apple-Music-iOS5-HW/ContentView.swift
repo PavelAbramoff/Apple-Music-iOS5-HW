@@ -29,33 +29,7 @@ struct ContentView: View {
                 .multilineTextAlignment(.center)
                 .foregroundColor(.gray)
         }
-        TabView {
-            
-            Text("")
-                .tabItem {
-                    Image(systemName: "house.fill")
-                    Text("Медиатека")
-                }
-            
-            Text("")
-                .tabItem {
-                    Image(systemName: "dot.radiowaves.left.and.right")
-                    Text("Радио")
-                }
-            
-            Text("")
-                .tabItem {
-                    Image(systemName: "magnifyingglass")
-                    Text("Поиск")
-                }
-        }
-        .accentColor(.red)
-    }
-}
-
-
-struct  ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+        
+        ZStack
     }
 }
