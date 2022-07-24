@@ -29,7 +29,6 @@ struct ContentView: View {
                 .multilineTextAlignment(.center)
                 .foregroundColor(.gray)
         }
-        
-        ZStack
+        TabBar()
     }
 }
