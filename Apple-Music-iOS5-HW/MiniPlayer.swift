@@ -34,7 +34,7 @@ struct MiniPlayer: View {
                 
                 Button(action: {}, label: {
                     
-                    Image(systemName: "forfard.fill")
+                    Image(systemName: "forward.fill")
                         .font(.title2)
                         .foregroundColor(.primary)
                 })
@@ -43,6 +43,6 @@ struct MiniPlayer: View {
         }
         .frame(height: 80)
         .background(BlurView())
-        .offset(y: -40)
+        .offset(y: -48)
     }
 }
