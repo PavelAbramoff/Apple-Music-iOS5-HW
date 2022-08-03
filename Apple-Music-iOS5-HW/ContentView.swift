@@ -9,35 +9,35 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var showingSecondView = false
+    @State private var mainScreen = true
     
     var body: some View {
         NavigationView {
-            ScrollView {
-            }
-            .navigationBarTitle("Медиатека")
-            .navigationBarItems(trailing: HStack {
-                Button(action: {
-                    self.showingSecondView.toggle()
-                }) {
-                    Text("Править")
-                } .fullScreenCover(isPresented: $showingSecondView) {
-                    SecondView()
-                        
-                }
-                .foregroundColor(.red)
-            })
+            screenView
+                .navigationBarTitle("Медиатека")
+                .navigationBarItems(
+                    trailing: Button(
+                        action: { mainScreen.toggle() },
+                        label: { Text(lableChange()) }
+                    )
+                )
+                .environment(\.editMode,
+                              .constant(mainScreen
+                                        ? EditMode.inactive
+                                        : EditMode.active))
         }
-        VStack {
-            Text("Ищите свою музыку ?")
-                .font(.title.bold())
-                .foregroundColor(.black)
-            Text("Здесь появится купленная Вами Музыка в iTunes Store музыка")
-                .lineLimit(nil)
-                .font(.callout.bold())
-                .multilineTextAlignment(.center)
-                .foregroundColor(.gray)
+    }
+    
+    @ViewBuilder private var screenView: some View {
+        if mainScreen {
+            FirstScren()
+        }else{
+            ListView()
         }
-        TabBar()
+    }
+    
+    private func lableChange() -> String {
+        mainScreen ? "Править" : "Готово"
     }
 }
+

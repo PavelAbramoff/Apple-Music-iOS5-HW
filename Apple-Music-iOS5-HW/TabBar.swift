@@ -12,32 +12,27 @@ struct TabBar: View {
     
     var body: some View {
         
-        ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom),
-               content: {
-            
+        ZStack {
             TabView {
-                
-                Text("")
+                ContentView() // ВЬЮШКА ДЛЯ ТАББАРА
                     .tabItem {
                         Image(systemName: "house.fill")
                         Text("Медиатека")
                     }
-                
-                Text("")
+                Text("RADIO") // ТУТ БУДЕТ ДРУГАЯ ВЬЮШКА ДЛЯ ТАББАРА
                     .tabItem {
                         Image(systemName: "dot.radiowaves.left.and.right")
                         Text("Радио")
                     }
-                
-                Text("")
+                Text("SEARCH") // ТУТ БУДЕТ ДРУГАЯ ВЬЮШКА ДЛЯ ТАББАРА
                     .tabItem {
                         Image(systemName: "magnifyingglass")
                         Text("Поиск")
                     }
             }
             .accentColor(.red)
-            
             MiniPlayer()
-        })
+                .padding(.bottom, 40)
+        }
     }
 }

@@ -11,20 +11,20 @@ struct MiniPlayer: View {
     var body: some View {
         
         VStack{
-            HStack(spacing: 15){
-                
+            Spacer()
+            HStack() {
                 Image("france")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 55, height: 55)
                     .cornerRadius(15)
                 
-                Text("Edith Piaf")
-                    .font(.title2)
-                    .fontWeight(.bold)
+                Text("Douce France")
+                    .font(.title3)
+                    .fontWeight(.none)
                     .foregroundColor(.black)
                 
-                Spacer(minLength: 0)
+                Spacer()
                 
                 Button(action: {}, label: {
                     
@@ -39,11 +39,16 @@ struct MiniPlayer: View {
                         .font(.title2)
                         .foregroundColor(.primary)
                 })
+    
             }
-            .padding(.horizontal)
+            .frame(height: 70)
+            .background(Color(UIColor.systemGray5))
+            .padding(.horizontal, 2)
+            Divider()
+                .padding(.top, -10)
         }
-        .frame(height: 80)
-        .background(BlurView())
-        .offset(y: -48)
+//        .frame(height: 80)
+//        .background(BlurView())
+//        .offset(y: -48)
     }
 }
