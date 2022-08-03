@@ -19,9 +19,9 @@ struct MiniPlayer: View {
                     .frame(width: 55, height: 55)
                     .cornerRadius(15)
                 
-                Text("Edith Piaf")
-                    .font(.title2)
-                    .fontWeight(.bold)
+                Text("Douce France")
+                    .font(.title3)
+                    .fontWeight(.none)
                     .foregroundColor(.black)
                 
                 Spacer(minLength: 0)
