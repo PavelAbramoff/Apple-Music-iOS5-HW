@@ -19,7 +19,7 @@ struct TabBar: View {
                         Image(systemName: "house.fill")
                         Text("Медиатека")
                     }
-                Text("RADIO") // ТУТ БУДЕТ ДРУГАЯ ВЬЮШКА ДЛЯ ТАББАРА
+                RadioView()// ТУТ БУДЕТ ДРУГАЯ ВЬЮШКА ДЛЯ ТАББАРА
                     .tabItem {
                         Image(systemName: "dot.radiowaves.left.and.right")
                         Text("Радио")
