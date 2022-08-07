@@ -13,16 +13,13 @@ struct GridView: View {
     @Binding var columns: [GridItem]
     
     var body: some View {
-        
         VStack {
-            
             if self.columns.count == 2 {
                 VStack(spacing: 15){
-                  
                     ZStack(alignment: Alignment(horizontal: .trailing, vertical: .top)) {
                         Image(radio.image)
                             .resizable()
-                            .frame(height: 150)
+                            .frame(width: 150, height: 150, alignment: .leading)
                             .cornerRadius(5)
                         
                         Button {
@@ -36,55 +33,53 @@ struct GridView: View {
                         }
                         .padding(.all,10)
                     }
-                    
+                    Spacer()
                     Text(radio.name)
                         .fontWeight(.bold)
                         .lineLimit(1)
-                    
                     Text("Станция Apple Music")
                         .padding(.vertical, 1)
-                        .lineLimit(1)
+                        .font(.subheadline)
+                        .lineLimit(2)
                         .foregroundColor(.gray)
+
                 }
-               
-                } else {
-                     
-                    HStack(spacing: 15){
-                        ZStack(alignment: Alignment(horizontal: .trailing, vertical: .top)) {
-                            Image(radio.image)
-                                .resizable()
-                                //.frame()
-                                .cornerRadius(5)
+                
+            } else {
+                
+                HStack(spacing: 15){
+                    ZStack(alignment: Alignment(horizontal: .trailing, vertical: .top)) {
+                        Image(radio.image)
+                            .resizable()
+                            .frame(width: 100, height: 100, alignment: .leading)
+                            .cornerRadius(5)
                         
+                        Button {
                             
-                            Button {
-                                
-                            } label: {
-                                Image(systemName: "heart.fill")
-                                    .foregroundColor(.red)
-                                    .padding(.all,5)
-                                    .background(Color.white)
-                                    .clipShape(Circle())
-                            }
-                            .padding(.all,10)
-                            
+                        } label: {
+                            Image(systemName: "heart.fill")
+                                .foregroundColor(.red)
+                                .padding(.all,5)
+                                .background(Color.white)
+                                .clipShape(Circle())
                         }
-                     
-                        VStack(alignment: .leading, spacing: 10) {
-                            
-                            Text(radio.name)
-                                .fontWeight(.bold)
-                                .lineLimit(1)
-                            
-                            Text("Станция Apple Music")
-                                .padding(.vertical, 1)
-                                .lineLimit(1)
-                                .foregroundColor(.gray)
-                        }
-                        Spacer(minLength: 10)
+                        .padding(.all,10)
+                        
                     }
-                    Divider()
+                    
+                    VStack(alignment: .leading, spacing: 10) {
+                        Text(radio.name)
+                            .fontWeight(.bold)
+                            .lineLimit(1)
+                        Text("Станция Apple Music")
+                            .padding(.vertical, 1)
+                            .lineLimit(1)
+                            .foregroundColor(.gray)
+                    }
+                    Spacer(minLength: 10)
                 }
+                Divider()
             }
         }
     }
+}
