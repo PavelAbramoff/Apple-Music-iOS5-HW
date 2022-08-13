@@ -9,8 +9,6 @@ import SwiftUI
 
 struct RadioView: View {
     
-    
-    
     init() {
         UITabBar.appearance().isTranslucent = true
         UITabBar.appearance().backgroundColor = UIColor.systemGray5

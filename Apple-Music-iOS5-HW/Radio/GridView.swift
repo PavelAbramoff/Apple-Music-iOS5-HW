@@ -33,7 +33,9 @@ struct GridView: View {
                         }
                         .padding(.all,10)
                     }
+                    
                     Spacer()
+                    
                     Text(radio.name)
                         .fontWeight(.bold)
                         .lineLimit(1)
@@ -42,10 +44,8 @@ struct GridView: View {
                         .font(.subheadline)
                         .lineLimit(2)
                         .foregroundColor(.gray)
-
-                }
-                
-            } else {
+                    }
+                } else {
                 
                 HStack(spacing: 15){
                     ZStack(alignment: Alignment(horizontal: .trailing, vertical: .top)) {
