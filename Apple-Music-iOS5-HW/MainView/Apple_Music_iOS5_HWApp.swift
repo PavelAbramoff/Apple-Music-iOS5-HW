@@ -9,12 +9,9 @@ import SwiftUI
 
 @main
 struct Apple_Music_iOS5_HWApp: App {
-    let persistenceController = PersistenceController.shared
-
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            TabBar()
         }
     }
 }
