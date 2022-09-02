@@ -36,7 +36,7 @@ struct MiniPlayer: View {
                 
                 if expand{Spacer(minLength: 0)}
                 
-                Image("france")
+                Image("s8")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: expand ? height : 50, height: expand ? height : 50)
@@ -44,7 +44,7 @@ struct MiniPlayer: View {
                 
                 if !expand{
                     
-                    Text("France")
+                    Text("Pirates")
                         .font(.title2)
                         .fontWeight(.bold)
                         .matchedGeometryEffect(id: "Label", in: animation)

@@ -43,7 +43,6 @@ struct RadioView: View {
                               "rectangle.grid.1x2" : "square.grid.2x2")
                         .font(.system(size: 30))
                         .foregroundColor(.black)
-                        Text("Перейти")
                     }
                 }
                 

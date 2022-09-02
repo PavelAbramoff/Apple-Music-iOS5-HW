@@ -38,7 +38,7 @@ struct TabBar: View {
                     
                     Text("Радио")
                 }
-            SearchView()
+            SearchViewUI()
                 .tag(2)
                 .tabItem {
                     
